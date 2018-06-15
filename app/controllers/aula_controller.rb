@@ -1,0 +1,2 @@
+class AulaController < ApplicationController
+end

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <header class="navbar-shadow">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html">Titulo do Projeto</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>                                
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    
+
+    <div class="container">
+    	<section class="video">
+		 	<iframe width="100%" height="720" src="<%= $a.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</section>
+		
+		<hr>
+		
+		<section class="video-text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus tincidunt auctor. Ut eu ante nulla. In hac habitasse platea dictumst. Curabitur suscipit scelerisque lorem vel commodo. Ut ante orci, feugiat ut massa eu, pellentesque tristique enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas in tellus a enim pretium vulputate. Nunc rhoncus iaculis tellus, sit amet feugiat massa convallis ac.</p>
+
+			<p>Integer suscipit tempor placerat. Sed aliquam elit id pulvinar auctor. Quisque consectetur eros et turpis sodales pharetra. Fusce efficitur faucibus luctus. Curabitur urna ipsum, dictum in quam sed, dignissim laoreet massa. Suspendisse potenti. Aenean aliquet tincidunt pretium. Nulla facilisi. Aliquam dignissim ipsum eu purus venenatis, at commodo lorem semper.</p>
+
+			<p>Vestibulum lobortis, arcu quis sollicitudin imperdiet, metus enim consectetur est, eget vehicula enim felis eu nulla. Phasellus consectetur euismod est vitae varius. In eget eros quam. Proin ultricies sit amet leo mattis porttitor. Quisque nisi eros, vulputate non interdum eget, porta a sem. Nullam tincidunt ligula vel nunc viverra interdum. Donec dapibus faucibus dignissim. Cras finibus quam sed hendrerit maximus. Donec dignissim erat vitae venenatis laoreet. Morbi interdum mauris in vehicula mollis. Maecenas auctor dignissim quam at placerat. Integer sit amet libero eget mauris sodales convallis rutrum id magna. Suspendisse efficitur posuere elit, quis pharetra velit posuere sit amet. Nam eros lectus, dapibus ac aliquet sit amet, sodales aliquam urna.</p>
+		</section>
+		
+		<section class="form-box">
+			<div class = 'text'>
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<form id="todoForm">
+							<div class="form-group">
+								<input id="username" class="form-control" placeholder="Nome">
+							</div>
+							<div class="form-group">
+								<textarea id="comment" class="form-control" placeholder="Participe da discussão..."></textarea>
+							</div>
+							<div class="form-group">
+								<button type="button" onclick="todoList()" class="btn btn-style btn-lg">Enviar</button>
+							</div>
+						</form>
+						<ul id="commentList" class="list-group"></ul>					
+					</div>
+				</div>
+			</div>	
+		</section>
+    </div>
+      
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/principal.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
