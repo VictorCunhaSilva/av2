@@ -6,26 +6,26 @@ body{
 {.row {
     margin-right: -15px;
     margin-left: -15px;
-}}
-
+}
+}
 @media (min-width: 992px)
 {.row {
     margin-right: -15px;
     margin-left: -15px;
-}}
-
+}
+}
 @media (min-width: 768px)
 {.row {
     margin-right: -15px;
     margin-left: -15px;
-}}
-
+}
+}
 @media (min-width: 576px)
 {.row {
     margin-right: -15px;
     margin-left: -15px;
-}}
-
+}
+}
 .navbar-shadow{
 	box-shadow: 0 0.25rem 0.125rem 0 #080808;
     margin-bottom: 2.5rem;
@@ -38,7 +38,7 @@ body{
 .card {
 	color: #828282;
     float: left;
-    width: 33.33333%;
+    width: 33.333%;
     padding: .75rem;
     margin-bottom: 2rem;
     border: 0;
@@ -108,4 +108,12 @@ hr {
     color: #fff;
     background-color: transparent;
     border-color: #ced4da;
+}
+
+.upload-icon{
+  color: #FFFF;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 15px;
 }
