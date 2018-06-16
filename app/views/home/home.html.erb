@@ -19,25 +19,30 @@
     <div class="container">
 		<!--
 		-->
-		<% todos = Video.all %>
 		<% $i = 0 %>
+		<% categorias = Categorium.all %>
+		<% todos = Video.all %>
+				<% categorias.each do |categoria| %>
         <% todos.each do |video| %>
+        <% if (video.categoria == categoria.nome)%>
         <% $i = $i + 1 %>
-        <% # registro%> 
+        
+        
 		
-		<div class="card" style="width: 18rem;">
+		<div class="card" style="width: 18rem;height:25rem;">
 		 	<img class="card-img-top"> 
-		 	<img src="<%= video.tumb%>"></img>
+		 	<img src="<%= video.tumb%>" height="50%" width="100%"></img>
 		 	<div class="card-body">
-		    	<h5 class="card-title"><%= video.titulo%></h5>
-		    	<p class="card-text"><%= video.descricao %></p>
-		    	<button href="aula.html" onclick="<% $a = Video.take(todos.size)[$i]%>window.location.href='/aula'">Assistir</button>
-		    	<a href="aula.html" class="btn btn-style btn-lg">Assistir</a>
-		    	
+		    	<h5 align="center" class="card-title"><%= video.titulo%></h5>
+		    	<p class="card-text"><%= video.descricao%></p>
+		    	<p align="center"><%= $i%>
+		    	<button id="<%= $i%>" class="btn" align="center" onclick="<% $a = $i %> window.location.href='/aula'">Assistir</button>
+		    	</p>
 		 	</div>
 		</div>
 		<% end %>
-
+		<% end %>
+		<% end %>
     </div>
   </body>
 </html>
