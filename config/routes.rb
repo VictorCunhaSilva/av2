@@ -5,5 +5,4 @@ Rails.application.routes.draw do
     get "login" => "login#login"
     get "upload" => "upload#upload"
     root :to => "login#login"
-
 end
