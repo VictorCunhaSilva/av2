@@ -17,32 +17,49 @@
   <body>
   <%= yield %>
     <div class="container">
-		<!--
-		-->
-		<% $i = 0 %>
-		<% categorias = Categorium.all %>
-		<% todos = Video.all %>
-				<% categorias.each do |categoria| %>
-        <% todos.each do |video| %>
-        <% if (video.categoria == categoria.nome)%>
-        <% $i = $i + 1 %>
-        
-        
+		<!-- -->
 		
+
+		
+		<% todos = Video.all %>
+    <% $a = Video.take(10)[0]%>
 		<div class="card" style="width: 18rem;height:25rem;">
 		 	<img class="card-img-top"> 
-		 	<img src="<%= video.tumb%>" height="50%" width="100%"></img>
+		 	<img src="<%= $a.tumb%>" height="50%" width="100%"></img>
 		 	<div class="card-body">
-		    	<h5 align="center" class="card-title"><%= video.titulo%></h5>
-		    	<p class="card-text"><%= video.descricao%></p>
-		    	<p align="center"><%= $i%>
-		    	<button id="<%= $i%>" class="btn" align="center" onclick="<% $a = $i %> window.location.href='/aula'">Assistir</button>
+		    	<h5 align="center" class="card-title"><%= $a.titulo%></h5>
+		    	<p class="card-text"><%= $a.descricao%></p>
+		    	<p align="center">
+		    	<button class="btn" align="center" onclick=<% $aula = $a%>"window.location.href='/aula'">Assistir</button>
 		    	</p>
 		 	</div>
 		</div>
-		<% end %>
-		<% end %>
-		<% end %>
+		        <% $b = Video.take(10)[1]%>
+		<div class="card" style="width: 18rem;height:25rem;">
+		 	<img class="card-img-top"> 
+		 	<img src="<%= $b.tumb%>" height="50%" width="100%"></img>
+		 	<div class="card-body">
+		    	<h5 align="center" class="card-title"><%= $b.titulo%></h5>
+		    	<p class="card-text"><%= $b.descricao%></p>
+		    	<p align="center">
+		    	<button class="btn" align="center" onclick="<% $aula = $b%>window.location.href='/aula'">Assistir</button>
+		    	</p>
+		 	</div>
+		</div>
+		        <% $c = Video.take(10)[2]%>
+		<div class="card" style="width: 18rem;height:25rem;">
+		 	<img class="card-img-top"> 
+		 	<img src="<%= $c.tumb%>" height="50%" width="100%"></img>
+		 	<div class="card-body">
+		    	<h5 align="center" class="card-title"><%= $c.titulo%></h5>
+		    	<p class="card-text"><%= $c.descricao%></p>
+		    	<p align="center">
+		    	<button class="btn" align="center" onclick=<% $aula = $c%>"window.location.href='/aula'">Assistir</button>
+		    	</p>
+		 	</div>
+		</div>
+		
+
     </div>
   </body>
 </html>

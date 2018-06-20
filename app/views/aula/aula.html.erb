@@ -14,21 +14,15 @@
     <title>Hello, world!</title>
   </head>
   <body>
-		<% todos = Video.all %>
-		<% url = todos[$a].url%>
     <div class="container">
     	<section class="video">
-		 	<iframe width="100%" height="720" src="<%= url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		 	<iframe width="100%" height="720" src="<%= $aula.url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</section>
 		
 		<hr>
 		
 		<section class="video-text">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus tincidunt auctor. Ut eu ante nulla. In hac habitasse platea dictumst. Curabitur suscipit scelerisque lorem vel commodo. Ut ante orci, feugiat ut massa eu, pellentesque tristique enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas in tellus a enim pretium vulputate. Nunc rhoncus iaculis tellus, sit amet feugiat massa convallis ac.</p>
-
-			<p>Integer suscipit tempor placerat. Sed aliquam elit id pulvinar auctor. Quisque consectetur eros et turpis sodales pharetra. Fusce efficitur faucibus luctus. Curabitur urna ipsum, dictum in quam sed, dignissim laoreet massa. Suspendisse potenti. Aenean aliquet tincidunt pretium. Nulla facilisi. Aliquam dignissim ipsum eu purus venenatis, at commodo lorem semper.</p>
-
-			<p>Vestibulum lobortis, arcu quis sollicitudin imperdiet, metus enim consectetur est, eget vehicula enim felis eu nulla. Phasellus consectetur euismod est vitae varius. In eget eros quam. Proin ultricies sit amet leo mattis porttitor. Quisque nisi eros, vulputate non interdum eget, porta a sem. Nullam tincidunt ligula vel nunc viverra interdum. Donec dapibus faucibus dignissim. Cras finibus quam sed hendrerit maximus. Donec dignissim erat vitae venenatis laoreet. Morbi interdum mauris in vehicula mollis. Maecenas auctor dignissim quam at placerat. Integer sit amet libero eget mauris sodales convallis rutrum id magna. Suspendisse efficitur posuere elit, quis pharetra velit posuere sit amet. Nam eros lectus, dapibus ac aliquet sit amet, sodales aliquam urna.</p>
+			<p><%= $aula.descricao%></p>
 		</section>
 		
 		<section class="form-box">
