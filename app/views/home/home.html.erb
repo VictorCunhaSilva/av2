@@ -16,13 +16,14 @@
   </head>
   <body>
   <%= yield %>
-    <div class="container">
+    
 		<!-- -->
 
 		<% cat = Categorium.all%>
+		 
 		<% todos = Video.all %>
 		<% cat.each do |categoria|%>
-		<div class ="w3-container" style="border-style:solid;border-width:2px">
+		<div class="container" style="border-style:solid;border-width:2px">
 		<h3 style="color:white"><%= categoria.nome %></h3>
 		<% todos.each do |video|%>
 		<% if (video.categoria == categoria.nome) %>
@@ -30,15 +31,15 @@
 		 	<img class="card-img-top"> 
 		 	<img src="<%= video.tumb%>" height="50%" width="100%"></img>
 		 	<div class="card-body">
-		    	<h5 align="center" class="card-title"><%= video.titulo%></h5>
-		    	<p class="card-text"><%= video.descricao%></p>
+		    	<h6 align="center" class="card-title"><%= video.titulo%></h6>
+		    	<p class="card-text"><%= video.descricao%>
 		    	<p align="center">
 		    	<button class="btn" align="center" onclick=<% $aula = video%>"window.location.href='/aula'">Assistir</button>
-		    	</p>
 		 	</div>
-		 	
+		 	</div>
 		</div>
 		</div>
+
 		<% end%>
 		<% end%>
 		<% end%>

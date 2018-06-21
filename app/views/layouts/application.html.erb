@@ -10,19 +10,39 @@
 <body>
        <header class="navbar-shadow">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="home">Titulo do Projeto</a>
+        <a class="navbar-brand" href="/home">Titulo do Projeto</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        
+                <% if logged_in? %>
+          <li><%= link_to "Users", users_path %></li>
+          <li>
+            <ul>
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", '#' %></li>
+              <li>
+                <%= link_to "Log out", sign_out_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-item active">
+          <%= link_to "Log in", root_path %></li>
+        <% end %>
+        <ul></ul>
+        	 <%= link_to "Registrar", new_user_path %>
+        
+        
+        
+        
+        
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-            	<a class="nav-link" href="home"> <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-            	<a class="nav-link" href="login">Entrar/Registrar <span class="sr-only">(current)</span></a>
-            </li>
+
+<ul></ul>
+            
           </ul>
 
           <span><a href="upload"><i class="fa fa-upload upload-icon"></i></a></span>
