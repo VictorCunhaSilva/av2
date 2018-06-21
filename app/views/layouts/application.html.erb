@@ -10,28 +10,27 @@
 <body>
        <header class="navbar-shadow">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/home">Titulo do Projeto</a>
+        <a class="navbar-brand" href="/home">Video Aulas</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         
                 <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li>
-            <ul>
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
+              
+                
+               
               <li>
+                <p style="color:white;"><%= @current_user.name%>,
                 <%= link_to "Log out", sign_out_path, method: "delete" %>
               </li>
-            </ul>
           </li>
         <% else %>
           <li class="nav-item active">
           <%= link_to "Log in", root_path %></li>
-        <% end %>
-        <ul></ul>
+          <ul></ul>
         	 <%= link_to "Registrar", new_user_path %>
+        <% end %>
+        
         
         
         
@@ -40,7 +39,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-
+          
 <ul></ul>
             
           </ul>
